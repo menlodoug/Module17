@@ -4,7 +4,7 @@ Accuracy is (true positives + true negatives)/(total population), precision is (
 
 **Balanced accuracy** is calculated as the average of the proportion corrects of each class individually.  It is important to consider this, rather than overall accuracy, in heavily imbalanced populations.
 
-![image-20200510125825016](C:\Users\Doug Smith\AppData\Roaming\Typora\typora-user-images\image-20200510125825016.png)
+<img src="balanced.jpg" width="500" >
 
 Precision focuses on false positive errors and recall focuses on false negative errors.
 
@@ -16,13 +16,17 @@ Specificity measures the proportion of actual negatives that are correctly ident
 
 G-mean (geo) is the squared root of the product of the sensitivity and specificity.  The best value is 1 and the worst value is 0.  The Index of Balanced Accuracy (iba) combines an unbiased index of the overall accuracy and a measure about how dominant is the class with the highest individual accuracy rate.
 
-![image-20200510113605019](C:\Users\Doug Smith\AppData\Roaming\Typora\typora-user-images\image-20200510113605019.png)
+<img src="The-IBA-function-a-1.png" width="300" >
+
+Most of the models studies in this Challenge produce similar results across the various metrics.  The recall using the RandomForest algorithm (for the high-risk category) is lower than the other models and cause for concern.  This model does provide, though, for a prioritized ranking of features that should be considered in the loan application process and is very helpful in this regard.  Here are the top ten features, ranked.
+
+<img src="Top10.PNG" width="300" >
 
 
+Based on the table of results below, the EasyEnsemble algorithm produced the best results on our dataset.
 
-Most of the models studies in this Challenge produce similar results across the various metrics.  The recall using the RandomForest algorithm (for the high-risk category) is lower than the other models and cause for concern.  This model does provide, though, for a prioritized ranking of features that should be considered in the loan application process and is very helpful in this regard.  Based on the table of results below, the EasyEnsemble algorithm produced the best results on our dataset.
+<img src="models.png" width="700" >
 
-![image-20200510124020598](C:\Users\Doug Smith\AppData\Roaming\Typora\typora-user-images\image-20200510124020598.png)
 
 "Ensemble methods are techniques that aim at improving the accuracy of results in models by combining multiple models instead of using a single model. The combined models increase the accuracy of the results significantly. This has boosted the popularity of ensemble methods in [machine learning](https://courses.corporatefinanceinstitute.com/courses/machine-learning-python-fundamentals)." (**What are Ensemble Methods?**, CFI Education)  
 
